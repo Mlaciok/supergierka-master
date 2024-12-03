@@ -8,6 +8,7 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     public float bulletSpeed = 10f;
+    public Rigidbody2D rb;
 
 
     public List<GameObject> zombies;
@@ -19,7 +20,7 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
-
+        zombies = new List<GameObject>(GameObject.FindGameObjectsWithTag("Zombie"));
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
@@ -39,10 +40,10 @@ public class PlayerShooting : MonoBehaviour
                 GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
 
                 //Oblicz kierunek do celu
-                Vector3 direction = (target.transform.position - spawnPoint.position).normalized;
+                Vector2 direction = (target.transform.position - spawnPoint.position).normalized;
 
                 //Dodaj sile do pocisku
-                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 rb.velocity = direction * bulletSpeed;
 
                 //zniszcz pocisk po 5 sekundach

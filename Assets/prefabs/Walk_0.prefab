@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -103365914261037874}
   - component: {fileID: -4287599859421856371}
   - component: {fileID: 710397123984683274}
+  - component: {fileID: 1961012780218741147}
   m_Layer: 0
   m_Name: Walk_0
   m_TagString: Zombie
@@ -133,7 +134,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -150,5 +151,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29bbe4ad7317f2d44b0c2cafcc7e0a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1961012780218741147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539155369211678140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577172ecd74edcb4d96f6da15b99b8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
